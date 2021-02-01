@@ -13,10 +13,19 @@ protected:
     int rows;
     int cols;
 
+    const float MIN_VALUE = 0.;
+    const float MAX_VALUE = 100.;
+
 public:
     Matrix(int rows_, int cols_):rows(rows_), cols(cols_){}
     Matrix(const Matrix&);
     ~Matrix();
+
+//    virtual void add(Matrix &matrix) = 0;
+
+    virtual void multiply(Matrix &matrix) = 0;
+
+    void print();
 
     bool operator==(const Matrix &rhs) const {
         return data == rhs.data &&
@@ -36,27 +45,31 @@ public:
         return rows;
     }
 
-    void setRows(int rows) {
-        Matrix::rows = rows;
+    void setRows(int rows_) {
+        Matrix::rows = rows_;
     }
 
     int getCols() const {
         return cols;
     }
 
-    void setCols(int cols) {
-        Matrix::cols = cols;
+    void setCols(int cols_) {
+        Matrix::cols = cols_;
     }
 
 protected:
-    static void free(double **space, int rows, int columns);
-    static void fill(double **space, int rows, int columns);
-    static void fill(double **space, int rows, int columns, double value);
-    static double** allocate(int rows, int columns);
-    static double getRandomDouble(int min, int max);
+    void clear();
+
+    void fill();
+
+    void fill(float value);
+
+    float** allocate(int rows, int columns);
+
+    static float getRandomFloat(float min, float max) ;
 
 private:
-    Matrix();
+    Matrix(){};
 };
 
 
