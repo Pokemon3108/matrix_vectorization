@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-D:/Repositories/matrix-vectorization/main.cpp
-iostream
+D:/Repositories/matrix-vectorization/Matrix.cpp
+Matrix.h
+D:/Repositories/matrix-vectorization/Matrix.h
+
+D:/Repositories/matrix-vectorization/Matrix.h
+vector
 -
 

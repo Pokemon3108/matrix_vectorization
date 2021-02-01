@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/Repositories/matrix-vectorization/Matrix.cpp" "D:/Repositories/matrix-vectorization/cmake-build-debug/CMakeFiles/matrix_vectorization.dir/Matrix.cpp.obj"
   "D:/Repositories/matrix-vectorization/main.cpp" "D:/Repositories/matrix-vectorization/cmake-build-debug/CMakeFiles/matrix_vectorization.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
