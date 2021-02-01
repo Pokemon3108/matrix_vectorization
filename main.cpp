@@ -3,10 +3,10 @@
 #include "SimpleMatrix.h"
 
 int main() {
-    SimpleMatrix matrix1(5, 10);
-    matrix1.fill();
-    SimpleMatrix matrix2(10, 6);
-    matrix2.fill();
-    Matrix &result = matrix1.multiply(matrix2);
-    result.print();
+    SimpleMatrix matrix1(18, 8);
+    SimpleMatrix matrix2(8, 4);
+    matrix1.print();
+    matrix2.print();
+    matrix1.multiply(matrix2);
+    matrix1.print();
 }

@@ -1,4 +1,8 @@
 #pragma once
+
+#ifndef MATRIX_VECTORIZATION_MATRIX_H
+#define MATRIX_VECTORIZATION_MATRIX_H
+
 #include <vector>
 
 class Matrix {
@@ -11,15 +15,12 @@ protected:
     const float MAX_VALUE = 100.;
 
 public:
-    Matrix(int rows_, int cols_) : rows(rows_), cols(cols_) {
-        data=new float*[rows];
-        for (int i=0; i<rows_; ++i) {
-            data[i]=new float[cols_];
-        }
+    Matrix(int rows_, int cols_) : rows(rows_), cols(cols_) 
+        data = allocate(rows, cols);
+        fill();
     }
 
     Matrix(const Matrix &);
-
 
     ~Matrix();
 
