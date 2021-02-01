@@ -1,15 +1,9 @@
-//
-// Created by Neonl on 02/01/21.
-//
-
-#ifndef MATRIX_VECTORIZATION_MATRIX_H
-#define MATRIX_VECTORIZATION_MATRIX_H
-
+#pragma once
 #include <vector>
 
 class Matrix {
 protected:
-    int** data;
+    float **data;
     int rows;
     int cols;
 
@@ -17,13 +11,21 @@ protected:
     const float MAX_VALUE = 100.;
 
 public:
-    Matrix(int rows_, int cols_):rows(rows_), cols(cols_){}
-    Matrix(const Matrix&);
+    Matrix(int rows_, int cols_) : rows(rows_), cols(cols_) {
+        data=new float*[rows];
+        for (int i=0; i<rows_; ++i) {
+            data[i]=new float[cols_];
+        }
+    }
+
+    Matrix(const Matrix &);
+
+
     ~Matrix();
 
 //    virtual void add(Matrix &matrix) = 0;
 
-    virtual void multiply(Matrix &matrix) = 0;
+    virtual Matrix& multiply(Matrix &matrix) = 0;
 
     void print();
 
@@ -37,7 +39,7 @@ public:
         return !(rhs == *this);
     }
 
-    int **getData() const {
+    float **getData() const {
         return data;
     }
 
@@ -57,20 +59,20 @@ public:
         Matrix::cols = cols_;
     }
 
+    void fill();
+
 protected:
     void clear();
 
-    void fill();
-
     void fill(float value);
 
-    float** allocate(int rows, int columns);
+    float **allocate(int rows, int columns);
 
-    static float getRandomFloat(float min, float max) ;
+    float getRandomFloat(float min, float max);
+
+    void fill(float** matrix);
 
 private:
-    Matrix(){};
+    Matrix() {};
 };
 
-
-#endif //MATRIX_VECTORIZATION_MATRIX_H

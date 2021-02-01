@@ -1,6 +1,3 @@
-//
-// Created by Neonl on 02/01/21.
-//
 
 #include <cstdlib>
 #include <random>
@@ -66,6 +63,14 @@ void Matrix::print() {
     }
     std::cout << std::endl;
     std::cout << std::endl;
+}
+
+void Matrix::fill(float **matrix) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            data[i][j]=matrix[i][j];
+        }
+    }
 }
 
 

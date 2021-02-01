@@ -13,7 +13,7 @@ public:
 
 //    void add(Matrix &matrix) override;
 
-    void multiply(Matrix &matrix) override;
+    Matrix& multiply(Matrix &matrix) override;
 
 };
 
