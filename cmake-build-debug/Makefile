@@ -142,6 +142,60 @@ matrix_vectorization/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/build
 .PHONY : matrix_vectorization/fast
 
+Matrix.obj: Matrix.cpp.obj
+
+.PHONY : Matrix.obj
+
+# target to build an object file
+Matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/Matrix.cpp.obj
+.PHONY : Matrix.cpp.obj
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
+
+SimpleMatrix.obj: SimpleMatrix.cpp.obj
+
+.PHONY : SimpleMatrix.obj
+
+# target to build an object file
+SimpleMatrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/SimpleMatrix.cpp.obj
+.PHONY : SimpleMatrix.cpp.obj
+
+SimpleMatrix.i: SimpleMatrix.cpp.i
+
+.PHONY : SimpleMatrix.i
+
+# target to preprocess a source file
+SimpleMatrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/SimpleMatrix.cpp.i
+.PHONY : SimpleMatrix.cpp.i
+
+SimpleMatrix.s: SimpleMatrix.cpp.s
+
+.PHONY : SimpleMatrix.s
+
+# target to generate assembly for a file
+SimpleMatrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\matrix_vectorization.dir\build.make CMakeFiles/matrix_vectorization.dir/SimpleMatrix.cpp.s
+.PHONY : SimpleMatrix.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -178,6 +232,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... matrix_vectorization
+	@echo ... Matrix.obj
+	@echo ... Matrix.i
+	@echo ... Matrix.s
+	@echo ... SimpleMatrix.obj
+	@echo ... SimpleMatrix.i
+	@echo ... SimpleMatrix.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

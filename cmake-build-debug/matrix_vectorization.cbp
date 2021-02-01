@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Repositories/matrix-vectorization/Matrix.cpp">
+			<Option target="matrix_vectorization"/>
+		</Unit>
+		<Unit filename="D:/Repositories/matrix-vectorization/Matrix.h">
+			<Option target="matrix_vectorization"/>
+		</Unit>
+		<Unit filename="D:/Repositories/matrix-vectorization/SimpleMatrix.cpp">
+			<Option target="matrix_vectorization"/>
+		</Unit>
+		<Unit filename="D:/Repositories/matrix-vectorization/SimpleMatrix.h">
+			<Option target="matrix_vectorization"/>
+		</Unit>
 		<Unit filename="D:/Repositories/matrix-vectorization/main.cpp">
 			<Option target="matrix_vectorization"/>
 		</Unit>

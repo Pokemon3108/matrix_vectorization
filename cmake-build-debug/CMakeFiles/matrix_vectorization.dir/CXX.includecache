@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-D:/Repositories/matrix-vectorization/main.cpp
+D:/Repositories/matrix-vectorization/Matrix.cpp
+cstdlib
+-
+random
+-
 iostream
+-
+iomanip
+-
+Matrix.h
+D:/Repositories/matrix-vectorization/Matrix.h
+
+D:/Repositories/matrix-vectorization/Matrix.h
+vector
 -
 
