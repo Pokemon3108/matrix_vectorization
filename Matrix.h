@@ -25,7 +25,7 @@ public:
 
 //    virtual void add(Matrix &matrix) = 0;
 
-    virtual Matrix& multiply(Matrix &matrix) = 0;
+    virtual Matrix* multiply(Matrix &matrix)=0;
 
     void print();
 

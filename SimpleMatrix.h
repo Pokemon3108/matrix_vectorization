@@ -1,8 +1,6 @@
+#pragma once
 
-#ifndef MATRIX_VECTORIZATION_SIMPLEMATRIX_H
-#define MATRIX_VECTORIZATION_SIMPLEMATRIX_H
-
-
+#include <memory>
 #include "Matrix.h"
 
 class SimpleMatrix : public Matrix {
@@ -13,9 +11,8 @@ public:
 
 //    void add(Matrix &matrix) override;
 
-    Matrix& multiply(Matrix &matrix) override;
+    Matrix* multiply(Matrix &matrix) override;
 
 };
 
 
-#endif //MATRIX_VECTORIZATION_SIMPLEMATRIX_H
