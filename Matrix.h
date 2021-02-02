@@ -1,4 +1,5 @@
 #pragma once
+
 #include <vector>
 
 class Matrix {
@@ -12,67 +13,65 @@ protected:
 
 public:
     Matrix(int rows_, int cols_) : rows(rows_), cols(cols_) {
-        data=new float*[rows];
-        for (int i=0; i<rows_; ++i) {
-            data[i]=new float[cols_];
-        }
+        data = allocate(rows, cols);
+        fill();
     }
 
-    Matrix(const Matrix &);
 
+Matrix(const Matrix &);
 
-    ~Matrix();
+~Matrix();
 
 //    virtual void add(Matrix &matrix) = 0;
 
-    virtual Matrix* multiply(Matrix &matrix)=0;
+virtual Matrix* multiply(Matrix &matrix)=0;
 
-    void print();
+void print();
 
-    bool operator==(const Matrix &rhs) const {
-        return data == rhs.data &&
-               rows == rhs.rows &&
-               cols == rhs.cols;
-    }
+bool operator==(const Matrix &rhs) const {
+    return data == rhs.data &&
+           rows == rhs.rows &&
+           cols == rhs.cols;
+}
 
-    bool operator!=(const Matrix &rhs) const {
-        return !(rhs == *this);
-    }
+bool operator!=(const Matrix &rhs) const {
+    return !(rhs == *this);
+}
 
-    float **getData() const {
-        return data;
-    }
+float **getData() const {
+    return data;
+}
 
-    int getRows() const {
-        return rows;
-    }
+int getRows() const {
+    return rows;
+}
 
-    void setRows(int rows_) {
-        Matrix::rows = rows_;
-    }
+void setRows(int rows_) {
+    Matrix::rows = rows_;
+}
 
-    int getCols() const {
-        return cols;
-    }
+int getCols() const {
+    return cols;
+}
 
-    void setCols(int cols_) {
-        Matrix::cols = cols_;
-    }
+void setCols(int cols_) {
+    Matrix::cols = cols_;
+}
 
-    void fill();
+void fill();
 
 protected:
-    void clear();
+void clear();
 
-    void fill(float value);
+void fill(float value);
 
-    float **allocate(int rows, int columns);
+float **allocate(int rows, int columns);
 
-    float getRandomFloat(float min, float max);
+float getRandomFloat(float min, float max);
 
-    void fill(float** matrix);
+void fill(float** matrix);
 
 private:
-    Matrix() {};
+Matrix() {};
 };
 

@@ -37,15 +37,8 @@ void Matrix::fill() {
 }
 
 float Matrix::getRandomFloat(float min, float max) {
-  //  srand(static_cast<unsigned int>(time(0)));
-    float r=(float) (rand());
     float a = min + (float) (rand()) / ((float) (RAND_MAX / (max - min)));
     return a;
-//    std::default_random_engine generator;
-//    std::uniform_int_distribution<int> distribution(1,6);
-//    float a=distribution(generator);
-//    return distribution(generator);
-
 }
 
 void Matrix::fill(float value) {
