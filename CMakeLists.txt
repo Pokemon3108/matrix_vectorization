@@ -3,4 +3,4 @@ project(matrix_vectorization)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(matrix_vectorization main.cpp Matrix.cpp Matrix.h SimpleMatrix.cpp SimpleMatrix.h)
+add_executable(matrix_vectorization main.cpp Matrix.cpp Matrix.h)

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/University/HPPA/matrix_vectorization/Matrix.cpp
+cstdlib
+-
+random
+-
+iostream
+-
+iomanip
+-
+Matrix.h
+D:/University/HPPA/matrix_vectorization/Matrix.h
+
+D:/University/HPPA/matrix_vectorization/Matrix.h
+vector
+-
+

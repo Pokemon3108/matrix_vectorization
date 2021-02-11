@@ -4,9 +4,9 @@
 
 class Matrix {
 protected:
-    float **data;
-    int rows;
-    int cols;
+    float **data{};
+    int rows{};
+    int cols{};
 
     const float MIN_VALUE = 0.;
     const float MAX_VALUE = 100.;
@@ -20,12 +20,16 @@ public:
 
     Matrix(const Matrix &);
 
+    Matrix() = default;
+
     ~Matrix();
 
 
-    virtual Matrix *operator+(Matrix &matrix) = 0;
+    Matrix operator+(Matrix &matrix1);
 
-    virtual Matrix *operator*(Matrix &matrix) = 0;
+    Matrix operator*(Matrix &matrix1);
+
+    Matrix& operator=(const Matrix &matrix);
 
     void print();
 
@@ -61,10 +65,10 @@ public:
 
     void fill();
 
+    void fill(float value);
+
 protected:
     void clear();
-
-    void fill(float value);
 
     float **allocate(int rows, int columns);
 
@@ -72,7 +76,5 @@ protected:
 
     void fill(float **matrix);
 
-private:
-    Matrix() {};
 };
 
