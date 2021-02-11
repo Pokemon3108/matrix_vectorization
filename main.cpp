@@ -6,8 +6,8 @@ int main() {
 
     SimpleMatrix matrix1(5, 10);
     matrix1.fill();
-    SimpleMatrix matrix2(10, 6);
+    SimpleMatrix matrix2(5, 10);
     matrix2.fill();
-    auto result = reinterpret_cast<SimpleMatrix*> (matrix1.multiply(matrix2));
+    auto result = reinterpret_cast<SimpleMatrix*> (matrix1+matrix2);
     (*result).print();
 }

@@ -18,60 +18,61 @@ public:
     }
 
 
-Matrix(const Matrix &);
+    Matrix(const Matrix &);
 
-~Matrix();
+    ~Matrix();
 
-//    virtual void add(Matrix &matrix) = 0;
 
-virtual Matrix* multiply(Matrix &matrix)=0;
+    virtual Matrix *operator+(Matrix &matrix) = 0;
 
-void print();
+    virtual Matrix *operator*(Matrix &matrix) = 0;
 
-bool operator==(const Matrix &rhs) const {
-    return data == rhs.data &&
-           rows == rhs.rows &&
-           cols == rhs.cols;
-}
+    void print();
 
-bool operator!=(const Matrix &rhs) const {
-    return !(rhs == *this);
-}
+    bool operator==(const Matrix &rhs) const {
+        return data == rhs.data &&
+               rows == rhs.rows &&
+               cols == rhs.cols;
+    }
 
-float **getData() const {
-    return data;
-}
+    bool operator!=(const Matrix &rhs) const {
+        return !(rhs == *this);
+    }
 
-int getRows() const {
-    return rows;
-}
+    float **getData() const {
+        return data;
+    }
 
-void setRows(int rows_) {
-    Matrix::rows = rows_;
-}
+    int getRows() const {
+        return rows;
+    }
 
-int getCols() const {
-    return cols;
-}
+    void setRows(int rows_) {
+        Matrix::rows = rows_;
+    }
 
-void setCols(int cols_) {
-    Matrix::cols = cols_;
-}
+    int getCols() const {
+        return cols;
+    }
 
-void fill();
+    void setCols(int cols_) {
+        Matrix::cols = cols_;
+    }
+
+    void fill();
 
 protected:
-void clear();
+    void clear();
 
-void fill(float value);
+    void fill(float value);
 
-float **allocate(int rows, int columns);
+    float **allocate(int rows, int columns);
 
-float getRandomFloat(float min, float max);
+    float getRandomFloat(float min, float max);
 
-void fill(float** matrix);
+    void fill(float **matrix);
 
 private:
-Matrix() {};
+    Matrix() {};
 };
 

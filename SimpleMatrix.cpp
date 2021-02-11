@@ -1,7 +1,7 @@
 #include <stdexcept>
 #include "SimpleMatrix.h"
 
-Matrix* SimpleMatrix::multiply(Matrix &matrix) {
+Matrix* SimpleMatrix::operator*(Matrix &matrix) {
     if (cols != matrix.getRows())
         throw std::runtime_error("Can't multiply matrix");
 
@@ -27,6 +27,24 @@ Matrix* SimpleMatrix::multiply(Matrix &matrix) {
 
     return result;
 
+}
+
+Matrix *SimpleMatrix::operator+(Matrix &matrix) {
+    auto resultData = allocate(this->rows, this->cols);
+    auto data1 = matrix.getData();
+    auto data2=data;
+    for (int i=0; i<this->rows; ++i) {
+        auto row1=data1[i];
+        auto row2=data2[i];
+        for (int j=0; j< this->cols; ++j) {
+            resultData[i][j]=row1[j]+row2[j];
+        }
+    }
+
+    SimpleMatrix* result=new SimpleMatrix(this->rows, this->cols);
+    (*result).fill(resultData);
+
+    return result;
 }
 
 

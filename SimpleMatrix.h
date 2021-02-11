@@ -8,10 +8,9 @@ class SimpleMatrix : public Matrix {
 public:
     SimpleMatrix(int rows, int cols) : Matrix(rows, cols) {}
 
+    Matrix* operator + (Matrix& matrix) override;
 
-//    void add(Matrix &matrix) override;
-
-    Matrix* multiply(Matrix &matrix) override;
+    Matrix* operator *(Matrix &matrix) override;
 
 };
 
