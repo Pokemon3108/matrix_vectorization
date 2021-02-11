@@ -22,23 +22,3 @@ D:/University/HPPA/matrix_vectorization/Matrix.h
 vector
 -
 
-D:/University/HPPA/matrix_vectorization/SimpleMatrix.cpp
-stdexcept
--
-SimpleMatrix.h
-D:/University/HPPA/matrix_vectorization/SimpleMatrix.h
-
-D:/University/HPPA/matrix_vectorization/SimpleMatrix.h
-memory
--
-Matrix.h
-D:/University/HPPA/matrix_vectorization/Matrix.h
-
-D:/University/HPPA/matrix_vectorization/main.cpp
-iostream
--
-Matrix.h
-D:/University/HPPA/matrix_vectorization/Matrix.h
-SimpleMatrix.h
-D:/University/HPPA/matrix_vectorization/SimpleMatrix.h
-

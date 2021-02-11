@@ -6,8 +6,10 @@
 #include "Matrix.h"
 
 Matrix::Matrix(const Matrix &matrix) {
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; ++j) {
+    data = new float*[matrix.rows];
+    for (int i = 0; i < matrix.rows; ++i) {
+        data[i] = new float[matrix.cols];
+        for (int j = 0; j < matrix.cols; ++j) {
             data[i][j] = matrix.getData()[i][j];
         }
     }

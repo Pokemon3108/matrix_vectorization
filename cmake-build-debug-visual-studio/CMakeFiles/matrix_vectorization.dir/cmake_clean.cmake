@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/matrix_vectorization.dir/Matrix.cpp.obj"
-  "CMakeFiles/matrix_vectorization.dir/SimpleMatrix.cpp.obj"
   "CMakeFiles/matrix_vectorization.dir/main.cpp.obj"
   "matrix_vectorization.exe"
   "matrix_vectorization.exe.manifest"

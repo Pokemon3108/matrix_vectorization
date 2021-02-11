@@ -86,12 +86,6 @@
 		<Unit filename="D:/University/HPPA/matrix_vectorization/Matrix.h">
 			<Option target="matrix_vectorization"/>
 		</Unit>
-		<Unit filename="D:/University/HPPA/matrix_vectorization/SimpleMatrix.cpp">
-			<Option target="matrix_vectorization"/>
-		</Unit>
-		<Unit filename="D:/University/HPPA/matrix_vectorization/SimpleMatrix.h">
-			<Option target="matrix_vectorization"/>
-		</Unit>
 		<Unit filename="D:/University/HPPA/matrix_vectorization/main.cpp">
 			<Option target="matrix_vectorization"/>
 		</Unit>

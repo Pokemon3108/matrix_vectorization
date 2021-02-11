@@ -4,11 +4,6 @@
 CMakeFiles\matrix_vectorization.dir\Matrix.cpp.obj: ..\Matrix.cpp
 CMakeFiles\matrix_vectorization.dir\Matrix.cpp.obj: ..\Matrix.h
 
-CMakeFiles\matrix_vectorization.dir\SimpleMatrix.cpp.obj: ..\Matrix.h
-CMakeFiles\matrix_vectorization.dir\SimpleMatrix.cpp.obj: ..\SimpleMatrix.cpp
-CMakeFiles\matrix_vectorization.dir\SimpleMatrix.cpp.obj: ..\SimpleMatrix.h
-
 CMakeFiles\matrix_vectorization.dir\main.cpp.obj: ..\Matrix.h
-CMakeFiles\matrix_vectorization.dir\main.cpp.obj: ..\SimpleMatrix.h
 CMakeFiles\matrix_vectorization.dir\main.cpp.obj: ..\main.cpp
 
